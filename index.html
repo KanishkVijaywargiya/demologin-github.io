@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animate Floating Image</title>
+
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body id="floatBody">
+
+    <div class="top_header">
+        <span class="img_logo">
+            <img class="logo_img" src="./img/rn.png" alt="BlaceNova color pallette">
+            <p class="logo_name">BlaceNova Inc.&trade;</p>
+        </span>
+        <span class="header_center">Welcome to Login Page</span>
+        <span class="right_header">Demo</span>
+    </div>
+
+    <div class="container">
+        <div class="avatar">
+            <a href="#">
+                <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/751678/skytsunami.png" alt="Skytsunami" />
+            </a>
+        </div>
+        <div class="content"></div>
+    </div>
+
+    <div style="margin: 30px; text-align: center;">
+        <h1 style="color: #121212;">Please enter the following field</h1>
+    </div>
+
+    <div style="margin: 30px; text-align: center;">
+        <form>
+            <labeL style="font-weight: bold; color: #121212; font-size: 20px;">Enter SRN: </label>
+            <input
+                style="font-weight: bold; font-size: 20px; padding:5px; border-radius:5px; color: #121212; width: 280px;"
+                type="text" id="srn_check" placeholder="(Ex.:- R17CS000 or r17cs000)" />
+            <hr>
+            <input
+                style="font-weight: bold; font-size: 30px; width: 150px; padding:5px; border-radius: 20px; margin: 5px; background-color: #121212; color: #fff; cursor: pointer;"
+                type="submit" value="Check" onclick="validate()" />
+        </form>
+    </div>
+
+    <div style="display: flex; flex-direction: row; justify-content: center;">
+        <div id='success' style="display: none; justify-content: center; align-self: center; align-items: center;">
+            <img src="./img/success.gif" alt="Walking image">
+        </div>
+        <div id='failed' style="display: none; justify-content: center; align-self: center; align-items: center;">
+            <img src="./img/walk.gif" alt="Walking image">
+        </div>
+    </div>
+
+    <!-- footer -->
+    <div class="below_footer">
+        <p class="footer_name">&copy; 2020 BlaceNova Inc.&trade; Login & Registration Form.</p>
+    </div>
+
+    <!-- <script type="text/javascript">
+
+        var hideSuccess = function () {
+            success.style.display = "none";
+        };
+        var hideFailed = function () {
+            failed.style.display = "none";
+        };
+
+        function validate() {
+            var srn = document.getElementById("srn_check").value;
+            console.log('srn:', srn);
+
+            var failed = document.getElementById('failed');
+            var success = document.getElementById('success');
+
+            if (
+                srn.search(/^[A-Z a-z]+[0-9]+[0-9]+[A-Z a-z]+[A-Z a-z]+[0-9]+[0-9]+[0-9]+$/) == -1 ||
+                srn.length != 8) {
+                failed.style.display = "block";
+                setTimeout(() => { hideFailed() }, 3000); // 3 seconds
+            } else {
+                success.style.display = "block";
+                setTimeout(() => { hideSuccess() }, 3000); // 3 seconds
+            }
+        };
+    </script> -->
+
+    <script src="./js/func.js"></script>
+</body>
+
+</html>
